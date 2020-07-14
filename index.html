@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Vasily Esipenko">
+        <meta name="description" content="Todo List application">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <title>Todo List</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div class="about">
+            <h1 class="about-header">Todo List</h1>
+            <div class="about-descr">
+                <p>Todo list web application with Vue.js</p>
+            </div>
+        </div>
+        <div id="app">
+            <input type="text" placeholder="Enter your todo" v-model="taskItem" @keyup.enter="add()"><button class="add" @click="add()">Add</button>
+            <h2 class="app-header">Current tasks:</h2>
+            <div class="tasks" v-for="todo in tasks">
+                <label class="container">
+                    <span>{{todo.id}}</span>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>{{todo.task}}
+                  </label>
+            </div>
+        </div>
+        <script text="text/javascript" charset="utf-8" src="app.js"></script>
+    </body>
+</html>
