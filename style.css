@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 18px;
+
+    box-sizing: border-box;
+}
+
+/*About*/
+.about {
+    margin: 30px auto;
+    padding: 10px;
+
+    text-align: center;
+}
+
+.about::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 40%;
+    margin: 30px auto;
+    background-color: #333;
+    
+}
+
+.about-header {
+    font-size: 42px;
+    color: #009966;
+}
+
+.about-descr {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 350;
+    color: #555;
+}
+
+/*App*/
+#app {
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="text"] {
+    margin: 15px auto;
+    padding: 5px 14px;
+
+    border: 2px solid #009966;
+    background-color: #fafafa;
+    color: #333;
+    font-size: 22px;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.add {
+    margin: 15px auto;
+    padding: 5px 14px;
+
+    border: 2px solid #009966;
+    background-color: #009966;
+    color: #fafafa;
+    font-size: 22px;
+
+    transition: opacity .2s linear;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.add:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.add:focus {
+    outline: none;
+}
+
+/*Tasks*/
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding: 15px 25px;
+    text-align: center;
+    width: 70%;
+    margin: 25px auto;
+
+    cursor: pointer;
+    font-size: 22px;
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    left: 35%;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+
+    transition: background-color .2s linear;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
