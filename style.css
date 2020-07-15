@@ -10,6 +10,10 @@ body {
     box-sizing: border-box;
 }
 
+a, i {
+    text-decoration: none;
+}
+
 /*About*/
 .about {
     margin: 30px auto;
@@ -46,6 +50,7 @@ body {
     text-align: center;
 }
 
+/*Text input*/
 input[type="text"] {
     margin: 15px auto;
     padding: 5px 14px;
@@ -56,6 +61,10 @@ input[type="text"] {
     font-size: 22px;
 }
 
+input[type="text"]:focus {
+    outline: none;
+}
+
 input[type="text"]::placeholder {
     color: #888;
     font-family: 'Source Sans Pro', sans-serif;
@@ -63,9 +72,10 @@ input[type="text"]::placeholder {
     font-weight: 300;
 }
 
+/*Add btn*/
 .add {
-    margin: 15px auto;
-    padding: 5px 14px;
+    margin: 14px auto;
+    padding: 4px 14px;
 
     border: 2px solid #009966;
     background-color: #009966;
@@ -86,53 +96,57 @@ input[type="text"]::placeholder {
 }
 
 /*Tasks*/
-/* Customize the label (the container) */
-.container {
-    display: block;
+.tasks {
+    margin: 10px auto;
+}
+
+.task-item {
     position: relative;
-    padding: 15px 25px;
-    text-align: center;
-    width: 70%;
-    margin: 25px auto;
-
-    cursor: pointer;
-    font-size: 22px;
+    margin: 45px auto;
+    padding: 15px 30px;
+    width: 80%;
     border: 1px solid #333;
-    border-radius: 8px;
+    border-radius: 12px;
+}
 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Hide the browser's default radio button */
-  .container input {
+.task-inner {
+    display: inline-block;
+}
+
+.complete {
     position: absolute;
-    opacity: 0;
+    left: 13%;
+    transform: translateY(-10%);
+    font-size: 32px;
+    color: #333;
     cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    left: 35%;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
+    transition: color .1s linear;
+}
 
-    transition: background-color .2s linear;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
+.complete:hover {
+    color: #009966;
+}
+
+.delete {
+    position: absolute;
+    right: 13%;
+    transform: translateY(-80%);
+    font-size: 32px;
+    color: #f22;
+    cursor: pointer;
+    transition: opacity color .1s linear;
+}
+
+.delete:hover {
+    color: #f33;
+    opacity: .8;
+}
+
+.task-text {
+    font-size: 22px;
+}
+
+.task-text span {
+    margin-right: 10px;
+    font-weight: 600;
+}
