@@ -35,20 +35,20 @@ a, i {
 }
 
 .about-header {
-    font-size: 42px;
+    font-size: 48px;
     color: #009966;
 }
 
 .about-descr {
-    font-size: 20px;
+    font-size: 22px;
     font-style: italic;
-    font-weight: 350;
+    font-weight: 400;
     color: #555;
 }
 
 /*App*/
 #app {
-    margin: 0 auto;
+    margin: 10px auto;
     text-align: center;
 }
 
@@ -59,7 +59,7 @@ input[type="text"] {
 
     border: 2px solid #009966;
     background-color: #fafafa;
-    color: #888;
+    color: #777;
     font-style: italic;
     font-size: 22px;
 }
@@ -69,7 +69,7 @@ input[type="text"]:focus {
 }
 
 input[type="text"]::placeholder {
-    color: #888;
+    color: #777;
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
     font-weight: 300;
@@ -120,7 +120,7 @@ input[type="text"]::placeholder {
     position: absolute;
     padding: 5px;
     left: 13%;
-    transform: translateY(-20%);
+    transform: translateY(-18%);
     font-size: 24px;
     cursor: pointer;
     transition: background-color opacity .2s linear;
@@ -137,7 +137,7 @@ input[type="text"]::placeholder {
     position: absolute;
     padding: 5px;
     right: 13%;
-    transform: translateY(-80%);
+    transform: translateY(-82%);
     font-size: 24px;
     cursor: pointer;
     transition: opacity background-color .2s linear;
@@ -169,6 +169,8 @@ footer {
     width: 100%;
     max-width: 100%;
     height: 30px;
+    position: relative;
+    bottom: 0;
 
     padding: 12px 5px;
     margin-bottom: 5px;
@@ -195,4 +197,408 @@ footer {
 
 .about-a--footer:hover {
     opacity: .8;
+}
+
+/*Media*/
+@media (max-width: 990px) {
+    .complete {
+        position: absolute;
+        padding: 5px;
+        left: 10%;
+        transform: translateY(-18%);
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color opacity .2s linear;
+        border: none;
+        z-index: 1;
+    }
+
+    .delete {
+        position: absolute;
+        padding: 5px;
+        right: 10%;
+        transform: translateY(-82%);
+        font-size: 24px;
+        cursor: pointer;
+        transition: opacity background-color .2s linear;
+        border: none;
+        z-index: 1;
+    }
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+        height: 30px;
+        position: relative;
+        bottom: 0;
+    
+        padding: 12px 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        background-color: transparent;
+    
+        color: #333;
+        line-height: 1.4;
+        font-size: 20px;
+    
+        font-weight: 600;
+        font-style: italic;
+        text-align: left;
+    }
+    
+    .about-a--footer {
+        display: inline-block;
+        text-decoration: none;
+        color: #333;
+        font-size: 21px;
+        margin-left: 12px;
+        transition: opacity .1s linear;
+    }
+}
+
+@media (max-width: 770px) {
+    .complete {
+        position: absolute;
+        padding: 5px;
+        left: 8%;
+        transform: translateY(-19%);
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color opacity .2s linear;
+        border: none;
+        z-index: 1;
+    }
+
+    .delete {
+        position: absolute;
+        padding: 5px;
+        right: 8%;
+        transform: translateY(-82%);
+        font-size: 24px;
+        cursor: pointer;
+        transition: opacity background-color .2s linear;
+        border: none;
+        z-index: 1;
+    }
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+        height: 30px;
+        position: relative;
+        bottom: 0;
+    
+        padding: 12px 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        background-color: transparent;
+    
+        color: #333;
+        line-height: 1.4;
+        font-size: 20px;
+    
+        font-weight: 600;
+        font-style: italic;
+        text-align: left;
+    }
+    
+    .about-a--footer {
+        display: inline-block;
+        text-decoration: none;
+        color: #333;
+        font-size: 21px;
+        margin-left: 12px;
+        transition: opacity .1s linear;
+    }
+
+    .task-text {
+        font-size: 20px;
+    }
+
+    .task-item {
+        position: relative;
+        margin: 45px auto;
+        padding: 15px 25px;
+        width: 80%;
+        border: 1px solid #333;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about {
+        margin: 15px auto;
+        padding: 10px;
+    
+        text-align: center;
+    }
+
+    .complete {
+        position: absolute;
+        padding: 5px;
+        left: 5%;
+        transform: translateY(-19%);
+        font-size: 23px;
+        cursor: pointer;
+        transition: background-color opacity .2s linear;
+        border: none;
+        z-index: 1;
+    }
+
+    .delete {
+        position: absolute;
+        padding: 5px;
+        right: 5%;
+        transform: translateY(-82%);
+        font-size: 23px;
+        cursor: pointer;
+        transition: opacity background-color .2s linear;
+        border: none;
+        z-index: 1;
+    }
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+        height: 30px;
+        position: relative;
+        bottom: 0;
+    
+        padding: 12px 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        background-color: transparent;
+    
+        color: #333;
+        line-height: 1.4;
+        font-size: 18px;
+    
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+    }
+    
+    .about-a--footer {
+        display: inline-block;
+        text-decoration: none;
+        color: #333;
+        font-size: 21px;
+        margin-left: 12px;
+        transition: opacity .1s linear;
+    }
+
+    .task-text {
+        font-size: 20px;
+    }
+
+    .task-item {
+        position: relative;
+        margin: 45px auto;
+        padding: 15px 25px;
+        width: 85%;
+        border: 1px solid #333;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 440px) {
+    .about {
+        margin: 15px auto;
+        padding: 10px;
+    
+        text-align: center;
+    }
+    
+    .about::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 40%;
+        margin: 20px auto;
+        background-color: #333;
+        
+    }
+    
+    .about-header {
+        font-size: 42px;
+        color: #009966;
+    }
+    
+    .about-descr {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        color: #555;
+    }
+
+    input[type="text"] {
+        margin: 10px auto;
+        padding: 5px 14px;
+    
+        border: 1px solid #009966;
+        background-color: #fafafa;
+        color: #777;
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    .add {
+        margin: 9px auto;
+        padding: 4px 15px;
+    
+        border: 1px solid #009966;
+        background-color: #009966;
+        color: #fafafa;
+        font-size: 20px;
+    
+        transition: opacity .2s linear;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .task-item {
+        position: relative;
+        margin: 40px auto;
+        padding: 15px 30px;
+        width: 80%;
+        border: 1px solid #333;
+        border-radius: 12px;
+    }
+    
+    .task-inner {
+        display: inline-block;
+    }
+    
+    .complete {
+        position: absolute;
+        padding: 5px;
+        left: 3%;
+        transform: translateY(-18%);
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color opacity .2s linear;
+        border: none;
+        z-index: 1;
+    }
+    
+    .complete:hover {
+        background-color: #ccffdc;
+        opacity: .8;
+    }
+    
+    .delete {
+        position: absolute;
+        padding: 5px;
+        right: 3%;
+        transform: translateY(-82%);
+        font-size: 20px;
+        cursor: pointer;
+        transition: opacity background-color .2s linear;
+        border: none;
+        z-index: 1;
+    }
+    
+    .task-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    input[type="text"] {
+        margin: 10px auto;
+        padding: 6px 14px;
+    
+        border: 1px solid #009966;
+        background-color: #fafafa;
+        color: #777;
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    .add {
+        margin: 10px auto 10px;
+        padding: 4px 14px 6px;
+    
+        border: 1px solid #009966;
+        background-color: #009966;
+        color: #fafafa;
+        font-size: 18px;
+    
+        transition: opacity .2s linear;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    .task-item {
+        position: relative;
+        margin: 20px auto;
+        padding: 15px 30px;
+        width: 80%;
+        border: 1px solid #333;
+        border-radius: 12px;
+    }
+    
+    .task-inner {
+        display: inline-block;
+    }
+    
+    .complete {
+        position: absolute;
+        padding: 5px;
+        left: 3%;
+        transform: translateY(-22%);
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color opacity .2s linear;
+        border: none;
+        z-index: 1;
+    }
+    
+    .complete:hover {
+        background-color: #ccffdc;
+        opacity: .8;
+    }
+    
+    .delete {
+        position: absolute;
+        padding: 5px;
+        right: 3%;
+        transform: translateY(-77%);
+        font-size: 18px;
+        cursor: pointer;
+        transition: opacity background-color .2s linear;
+        border: none;
+        z-index: 1;
+    }
+    
+    .task-text {
+        font-size: 15px;
+    }
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+        height: 15px;
+        position: relative;
+        bottom: 0;
+    
+        padding: 12px 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        background-color: transparent;
+    
+        color: #333;
+        line-height: 1.4;
+        font-size: 16px;
+    
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+    }
+
+    .about-a--footer {
+        display: inline-block;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        margin-left: 12px;
+        transition: opacity .1s linear;
+    }
 }
