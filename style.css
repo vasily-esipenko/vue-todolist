@@ -8,6 +8,8 @@ body {
     font-size: 18px;
 
     box-sizing: border-box;
+
+    overflow-x: hidden;
 }
 
 a, i {
@@ -74,10 +76,10 @@ input[type="text"]::placeholder {
 
 /*Add btn*/
 .add {
-    margin: 14px auto;
-    padding: 4px 14px;
+    margin: 15px auto;
+    padding: 5px 14px;
 
-    border: 2px solid #009966;
+    border: 1px solid #009966;
     background-color: #009966;
     color: #fafafa;
     font-size: 22px;
@@ -97,7 +99,7 @@ input[type="text"]::placeholder {
 
 /*Tasks*/
 .tasks {
-    margin: 10px auto;
+    margin: 25px auto;
 }
 
 .task-item {
@@ -115,31 +117,41 @@ input[type="text"]::placeholder {
 
 .complete {
     position: absolute;
+    padding: 5px;
     left: 13%;
-    transform: translateY(-10%);
-    font-size: 32px;
-    color: #333;
+    transform: translateY(-20%);
+    font-size: 24px;
     cursor: pointer;
-    transition: color .1s linear;
+    transition: background-color opacity .2s linear;
+    border: none;
+    z-index: 1;
 }
 
 .complete:hover {
-    color: #009966;
+    background-color: #ccffdc;
+    opacity: .8;
 }
 
 .delete {
     position: absolute;
+    padding: 5px;
     right: 13%;
     transform: translateY(-80%);
-    font-size: 32px;
-    color: #f22;
+    font-size: 24px;
     cursor: pointer;
-    transition: opacity color .1s linear;
+    transition: opacity background-color .2s linear;
+    border: none;
+    z-index: 1;
 }
 
 .delete:hover {
-    color: #f33;
+    background-color: #ffc2c2;
     opacity: .8;
+}
+
+.complete:focus,
+.delete:focus {
+    outline: none;
 }
 
 .task-text {
@@ -149,4 +161,37 @@ input[type="text"]::placeholder {
 .task-text span {
     margin-right: 10px;
     font-weight: 600;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    max-width: 100%;
+    height: 30px;
+
+    padding: 12px 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: transparent;
+
+    color: #333;
+    line-height: 1.4;
+    font-size: 16px;
+
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+}
+
+.about-a--footer {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin-left: 12px;
+    transition: opacity .1s linear;
+}
+
+.about-a--footer:hover {
+    opacity: .8;
 }
