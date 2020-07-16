@@ -23,11 +23,9 @@ var app = new Vue({
         },
         complete(id) {
             this.tasks[id].completed = !this.tasks[id].completed;
-            console.log(this.tasks[id].completed);
         },
         remove(id) {
             this.tasks.splice(id, 1);
-            console.log("deleted");
         }
     }
 });
