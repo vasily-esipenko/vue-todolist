@@ -29,7 +29,16 @@
                 <div class="tasks" v-for="(todo, index) in tasks">
                     <div class="task-item">
                         <button class="complete" @click="complete(index)">✅</button>
-                        <div class="task-text"><span>{{index+1}}</span> {{todo.task}}</div>
+                        <div v-if="todo.completed">
+                            <div class="task-text" style="text-decoration: line-through; text-decoration-color:#009966;">
+                                <span>{{index+1}}</span> {{todo.task}}
+                            </div>
+                        </div>
+                        <div v-else>
+                            <div class="task-text">
+                                <span>{{index+1}}</span> {{todo.task}}
+                            </div>
+                        </div>
                         <button class="delete" @click="remove(index)">❌</button>
                     </div>
                 </div>
