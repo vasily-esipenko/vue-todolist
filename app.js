@@ -3,24 +3,31 @@ var app = new Vue({
     data: {
         taskItem: "",
         tasks: [
-            {id: 1, task: "Wake up", completed: false},
-            {id: 2, task: "Have a breakfast", completed: false},
-            {id: 3, task: "Write some code", completed: false}
+            {task: "Wake up", completed: false},
+            {task: "Have a breakfast", completed: false},
+            {task: "Write some code", completed: false}
         ],
-        zeroTasks: "You don't have any tasks =(\n Try to add something!"
+        zeroTasksOne: "You don't have any tasks now😌",
+        zeroTasksTwo: "Try to add one☝️"
     },
     methods: {
-        add: function() {
-            const newTask = {id: this.tasks.length+1, task: this.taskItem, completed: false}
-            this.tasks.push(newTask);
+        add() {
+            if (this.taskItem.length > 0) {
+                const newTask = {task: this.taskItem, completed: false}
+                this.tasks.push(newTask);
+                this.taskItem = "";
+            } else {
+                alert("You didn't add any tasks");
+            }
+
         },
-        complete: function(id) {
+        complete(id) {
             this.tasks[id].completed = !this.tasks[id].completed;
             console.log(this.tasks[id].completed);
         },
-        delete: function(id) {
+        remove(id) {
             this.tasks.splice(id, 1);
-            console.log(this.tasks.task);
+            console.log("deleted");
         }
     }
 });
