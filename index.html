@@ -12,56 +12,55 @@
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     </head>
     <body>
-
-        <div class="about">
-            <h1 class="about-header">Todo List</h1>
-            <div class="about-descr">
-                <p>Todo list web application with Vue.js</p>
-            </div>
-        </div>
-
-        <div id="app">
-
-            <input type="text" placeholder="Enter your todo" v-model="taskItem" @keyup.enter="add()"><button class="add" @click="add()">Add</button>
-            <h2 class="app-header">{{"Current tasks: " + tasks.length}}</h2>
-
-            <div v-if="tasks.length>0">
-                <div class="tasks" v-for="(todo, index) in JSON.parse(localStorage.getItem('items'))">
-                    <div class="task-item">
-                        <button class="complete" @click="complete(index), history.go(0)">✅</button>
-                        <div v-if="todo.completed">
-                            <div class="task-text" style="text-decoration: line-through; text-decoration-color:#009966;">
-                                <span>{{index+1}}</span> {{todo.task}}
+        <div class="page">
+            <header class="about">
+                <h1 class="about-header">Todo List</h1>
+                <div class="about-descr">
+                    <p>Todo list web application with Vue.js</p>
+                </div>
+            </header>
+    
+            <main id="app">
+    
+                <input type="text" placeholder="Enter your todo" v-model="taskItem" @keyup.enter="add()"><button class="add" @click="add()">Add</button>
+                <h2 class="app-header">{{"Current tasks: " + tasks.length}}</h2>
+    
+                <div v-if="tasks.length>0">
+                    <div class="tasks" v-for="(todo, index) in JSON.parse(localStorage.getItem('items'))">
+                        <div class="task-item">
+                            <button class="complete" @click="complete(index), history.go(0)">✅</button>
+                            <div v-if="todo.completed">
+                                <div class="task-text" style="text-decoration: line-through; text-decoration-color:#009966;">
+                                    <span>{{index+1}}</span> {{todo.task}}
+                                </div>
                             </div>
-                        </div>
-                        <div v-else>
-                            <div class="task-text">
-                                <span>{{index+1}}</span> {{todo.task}}
+                            <div v-else>
+                                <div class="task-text">
+                                    <span>{{index+1}}</span> {{todo.task}}
+                                </div>
                             </div>
+                            <button class="delete" @click="remove(index)">❌</button>
                         </div>
-                        <button class="delete" @click="remove(index)">❌</button>
                     </div>
                 </div>
-            </div>
-            <div v-else style="font-size: 22px; margin: 25px auto 65px;">
-                {{zeroTasksOne}} <br> {{zeroTasksTwo}}
-            </div>
+                <div v-else style="font-size: 22px; margin: 25px auto 65px;">
+                    {{zeroTasksOne}} <br> {{zeroTasksTwo}}
+                </div>
+            </main>
+    
+            <footer>
+                    Vasily Esipenko, 2020
+                    <a class="about-a about-a--footer" href="https://t.me/Vasily_Esipenko" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a class="about-a about-a--footer" href="https://github.com/vasily-esipenko" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="about-a about-a--footer" href="https://stackoverflow.com/users/13187161/vasily-esipenko?tab=profile" target="_blank">
+                        <i class="fab fa-stack-overflow"></i>
+                    </a>
+            </footer>
         </div>
-
-        <footer>
-            <div>
-                Vasily Esipenko, 2020
-                <a class="about-a about-a--footer" href="https://t.me/Vasily_Esipenko" target="_blank">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a class="about-a about-a--footer" href="https://github.com/vasily-esipenko" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a class="about-a about-a--footer" href="https://stackoverflow.com/users/13187161/vasily-esipenko?tab=profile" target="_blank">
-                    <i class="fab fa-stack-overflow"></i>
-                </a>
-            </div>
-        </footer>
         <script src="https://kit.fontawesome.com/c1c239f91b.js" crossorigin="anonymous"></script>
         <script text="text/javascript" charset="utf-8" src="app.js"></script>
     </body>
