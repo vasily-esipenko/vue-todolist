@@ -5,6 +5,7 @@ var app = new Vue({
         tasks: this.tasks = JSON.parse(localStorage.getItem("items")) || [],
         zeroTasksOne: "You don't have any tasks now😌",
         zeroTasksTwo: "Try to add one☝️",
+        toggleComplete: false
     },
     methods: {
         add() {
@@ -19,6 +20,7 @@ var app = new Vue({
 
         },
         complete(id) {
+            this.toggleComplete = !this.toggleComplete;
             this.tasks[id].completed = !this.tasks[id].completed;
             localStorage.setItem("items", JSON.stringify(this.tasks));
         },
