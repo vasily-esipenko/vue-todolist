@@ -19,12 +19,13 @@ var app = new Vue({
 
         },
         complete(id) {
-            this.tasks[id].completed = !this.tasks[id].completed;
+            const updateTask = {task: this.tasks[id].task, completed: !this.tasks[id].completed};
+            this.tasks.splice(id, 1, updateTask);
             localStorage.setItem("items", JSON.stringify(this.tasks));
         },
         remove(id) {
             this.tasks.splice(id, 1);
-            localStorage.setItem("items", JSON.stringify(this.tasks))
+            localStorage.setItem("items", JSON.stringify(this.tasks));
         }
     }
 });
