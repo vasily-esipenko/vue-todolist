@@ -4,7 +4,7 @@ var app = new Vue({
         taskItem: "",
         tasks: this.tasks = JSON.parse(localStorage.getItem("items")) || [],
         zeroTasksOne: "You don't have any tasks now😌",
-        zeroTasksTwo: "Try to add one☝️",
+        zeroTasksTwo: "Try to add one☝️"
     },
     methods: {
         add() {
